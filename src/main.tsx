@@ -1,13 +1,17 @@
-// @ts-types="@types/react-dom/client"
-import ReactDOM from "react-dom/client";
+// @deno-types="@types/react"
+import { StrictMode } from "react";
+// @deno-types="@types/react-dom/client"
+import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { Provider } from "./components/ui/provider.tsx";
 import { BrowserRouter } from "react-router";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <Provider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
+createRoot(document.getElementById("root") as HTMLElement).render(
+  <StrictMode>
+    <Provider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </StrictMode>
 );

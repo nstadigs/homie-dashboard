@@ -3,14 +3,16 @@
     "dev": "deno run -A  --node-modules-dir npm:vite@6",
     "build": "deno run -A --node-modules-dir npm:vite build",
     "preview": "deno run -A --node-modules-dir npm:vite preview",
-    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/",
+    "serve": "deno run --allow-net --allow-read jsr:@std/http@1/file-server dist/",
     "chakra-cli": "deno run -A --node-modules-dir npm:@chakra-ui/cli"
   },
   "imports": {
     "@chakra-ui/react": "npm:@chakra-ui/react@^3.2.3",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.2",
     "@emotion/react": "npm:@emotion/react@^11.14.0",
     "@types/react": "npm:@types/react@^19.0.1",
     "@types/react-dom": "npm:@types/react-dom@^19.0.1",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.4",
     "@ymjacky/mqtt5": "jsr:@ymjacky/mqtt5@^0.0.19",
     "immer": "npm:immer@^10.1.1",
     "motion": "npm:motion@^11.13.5",
@@ -21,12 +23,14 @@
     "react-icons": "npm:react-icons@^5.4.0",
     "react-router": "npm:react-router@^7.0.2",
     "#/": "./src/",
+    "vite": "npm:vite@^6.0.3",
     "zod": "npm:zod@^3.24.0"
   },
   "compilerOptions": {
     "types": ["react", "react-dom", "@types/react"],
-    "lib": ["dom", "dom.iterable", "deno.ns"],
+    "lib": ["dom", "dom.iterable", "deno.ns", "es2020"],
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react"
   }
 }
