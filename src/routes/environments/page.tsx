@@ -12,11 +12,7 @@ export function EnvironmentsPage() {
     <Stack p="5" gap="10">
       <Stack direction="row" align="center" gap="5">
         <Box asChild h="150px" w="150px">
-          <motion.img
-            layoutId="homie-logo"
-            src="/public/logo.svg"
-            alt="Homie"
-          />
+          <motion.img layoutId="homie-logo" src="/logo.svg" alt="Homie" />
         </Box>
         <Stack asChild>
           <motion.div

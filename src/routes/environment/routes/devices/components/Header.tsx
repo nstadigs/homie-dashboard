@@ -15,7 +15,7 @@ export function Header() {
       <Box asChild h="50px" w="50px" mr="2">
         <motion.img
           layoutId="homie-logo"
-          src="/public/logo.svg"
+          src="/logo.svg"
           alt="Homie Dashboard"
         />
       </Box>
